@@ -180,6 +180,12 @@ const STYLE = `
   .quote .q{margin-top:12px; font-size:32px; line-height:1.25; font-weight:600; max-width:1000px}
   .quote .a{margin-top:10px; font-family:var(--mono); font-size:12px; color:var(--muted2)}
   .quote .qm{position:absolute; right:18px; bottom:-30px; font-size:180px; line-height:1; font-family:Georgia, serif; color:rgba(55,255,139,.08); pointer-events:none}
+  footer{
+    margin-top:30px; padding-top:14px; border-top:1px dashed var(--line2);
+    display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    font-family:var(--mono); font-size:11px; color:var(--muted2); letter-spacing:.08em;
+  }
+  footer a{color:var(--bert2); text-decoration:none}
   code{
     font-family:var(--mono); font-size:12px; color:var(--bert2);
     background:rgba(25,199,255,.08); padding:1px 6px; border-radius:5px; border:1px solid rgba(25,199,255,.18);
@@ -263,7 +269,12 @@ function statusClass(value: "red" | "yellow" | "green") {
 }
 
 function heroShell(active: string, content: string) {
-  return `${renderHero(active)}${content}`;
+  return `${renderHero(active)}${content}
+  <footer>
+    <div>lease-obligation-risk-board · synthetic demonstration data only</div>
+    <div><a href="https://github.com/mizcausevic-dev/">GitHub</a> · <a href="https://www.linkedin.com/in/mirzacausevic/">LinkedIn</a> · <a href="https://kineticgain.com/">Kinetic Gain</a></div>
+    <div>Routes: / · /lease-lane · /obligation-risks · /landlord-posture · /verification · /docs</div>
+  </footer>`;
 }
 
 export function renderOverview() {
